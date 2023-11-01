@@ -24,7 +24,7 @@
 
 	<properties>
 		<java.version>17</java.version>
-		<mybatis.spring.boot>3.0.2</mybatis.spring.boot>
+		<mybatis.spring.boot>2.3.1</mybatis.spring.boot>
 		<io.springfox>2.9.2</io.springfox>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>

@@ -17,7 +17,6 @@
 			<groupId>org.example</groupId>
 			<artifactId>jmp_dto</artifactId>
 			<version>1.0.0</version>
-			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 	<properties>
