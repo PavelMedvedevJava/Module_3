@@ -19,14 +19,8 @@ spring:
             mode : always
     #for swagger compatibility with SB version :
     mvc:
-        pathmatch:
-            matching-strategy: ant_path_matcher
-
-swagger:
-    enabled: true
-    base-package: org/example/cloud
-    paths:
-        - /api/.*
+        path match:
+            matching-strategy: ANT_PATH_MATCHER
 
 mybatis:
     config-location: "classpath:mybatis-config.xml"
