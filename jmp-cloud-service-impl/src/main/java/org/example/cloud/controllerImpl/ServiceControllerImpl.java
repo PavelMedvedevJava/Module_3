@@ -1,15 +1,15 @@
 package org.example.cloud.controllerImpl;
 
-import org.example.api.SubscriptionService;
-import org.example.controller.ServiceController;
-import org.example.model.SubscriptionRequestDto;
-import org.example.model.SubscriptionResponseDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import org.example.api.SubscriptionService;
+import org.example.controller.ServiceController;
+import org.example.model.SubscriptionRequestDto;
+import org.example.model.SubscriptionResponseDto;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,13 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/service")
 @Api(tags = "ServiceController")
+@AllArgsConstructor
 public class ServiceControllerImpl implements ServiceController {
-	private SubscriptionService service;
-
-	@Autowired
-	public ServiceControllerImpl(SubscriptionService service) {
-		this.service = service;
-	}
+	private final SubscriptionService service;
 
 	@ApiOperation(value = "retrieve all Subscriptions")
 	@ApiResponses({
