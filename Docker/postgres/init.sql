@@ -7,14 +7,14 @@ create table "user"
         unique
         generated always as ( 0 ) STORED,
     name    varchar,
-    sername varchar,
-    birsday varchar
+    surname varchar,
+    birthdate date
 );
 create table "subscription"
 (
     id        integer,
     user_id   integer,
-    start_day date,
+    start_date date,
     constraint id
         primary key (id),
     constraint subscription___fk
